@@ -1,0 +1,24 @@
+.formArea {
+    width: 80%;
+    margin: auto;
+    padding: 20px 30px;
+    background: #f3f3f3;
+}
+
+
+.upload-files {
+    display: inline-block;
+    background: linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 13px;
+  }
+  .custom-file-input:hover::before {
+    border-color: black;
+  }

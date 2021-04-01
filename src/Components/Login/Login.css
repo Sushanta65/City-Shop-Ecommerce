@@ -1,0 +1,27 @@
+input.form-control.mb-3 {
+    border: none;
+    border-bottom: 1px solid lightgray;
+    border-radius: 0;
+    font-size: 14px;
+}
+input.form-control.mb-3:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: green;
+}
+input::placeholder{
+    font-size: 14px;
+}
+button{
+    padding: 0;
+    margin: 0;
+}
+.google{
+    width: 25px;
+}
+.alternativeSignIn button.w-100 {
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 25px;
+    padding: 6px;
+}

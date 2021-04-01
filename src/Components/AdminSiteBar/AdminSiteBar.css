@@ -1,0 +1,9 @@
+.siteBar{
+    min-height: 600px;
+}
+.siteBar img{
+    width: 20px;
+}
+li .nav-link{
+    color: green;
+}
