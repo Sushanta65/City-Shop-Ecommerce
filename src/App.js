@@ -42,9 +42,9 @@ function App() {
         <Route path='/login'>
           <Login></Login>
         </Route>
-        <Route path="/products/:id">
+        <PrivateRoute path="/products/:id">
           <ProductCheckOut></ProductCheckOut>
-        </Route>
+        </PrivateRoute>
       </Switch>
     </BrowserRouter>
     </UserContext.Provider>
