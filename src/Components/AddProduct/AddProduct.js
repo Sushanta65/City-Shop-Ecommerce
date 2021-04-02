@@ -7,7 +7,7 @@ import AdminSiteBar from '../AdminSiteBar/AdminSiteBar';
 
 const AddProduct = () => {
     
-    const { register, handleSubmit, watch, errors } = useForm();
+    const { register, handleSubmit } = useForm();
     const [imgURL, setImgURL] = useState(null)
     const onSubmit = data => {
         const price = parseFloat(data.price)
