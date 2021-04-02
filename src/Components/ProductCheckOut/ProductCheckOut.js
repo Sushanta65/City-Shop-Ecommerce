@@ -26,7 +26,7 @@ const ProductCheckOut = () => {
         }
         const orderDitails = { ...signedInuser, product: productInfo, orderPlacedTime: new Date().toDateString('dd/MM/yyyy') }
 
-        fetch('http://localhost:8080/addOrder', {
+        fetch('https://apricot-shortcake-00287.herokuapp.com/addOrder', {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(orderDitails)

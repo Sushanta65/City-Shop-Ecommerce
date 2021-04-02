@@ -5,7 +5,7 @@ import ProductList from '../ProductList/ProductList';
 const ManageProduct = () => {
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch('http://localhost:8080/products')
+        fetch('https://apricot-shortcake-00287.herokuapp.com/products')
         .then(res => res.json())
         .then(data => setProducts(data))
     }, [])

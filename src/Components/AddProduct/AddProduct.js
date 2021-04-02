@@ -18,7 +18,7 @@ const AddProduct = () => {
             discount: discount,
             imgURL: imgURL
         }
-        fetch('http://localhost:8080/addProduct', {
+        fetch('https://apricot-shortcake-00287.herokuapp.com/addProduct', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
