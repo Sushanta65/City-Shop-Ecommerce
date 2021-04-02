@@ -9,7 +9,7 @@ const ProductCheckOut = () => {
     const [product, setProduct] = useState({})
     const { name, price, discount, imgURL } = product;
     useEffect(() => {
-        fetch(`http://localhost:8080/products/${id}`)
+        fetch(`https://apricot-shortcake-00287.herokuapp.com/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data[0]))
     }, [id])
