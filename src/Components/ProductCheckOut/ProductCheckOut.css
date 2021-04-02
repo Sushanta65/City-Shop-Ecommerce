@@ -1,0 +1,15 @@
+h5.notification {
+    background: #00bcd43b;
+    padding: 10px;
+    display: inline-block;
+    color: #12790c;
+    font-weight: 400;
+}
+button#close {
+    border: none;
+    padding: 1px 5px;
+    background: white;
+}
+button#close:hover{
+    color:red;
+}

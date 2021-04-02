@@ -1,21 +1,22 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { UserContext } from './../../App';
+import './ProductCheckOut.css'
 
 const ProductCheckOut = () => {
     const [signedInuser] = useContext(UserContext)
-    const {id} = useParams()
+    const { id } = useParams()
     const [product, setProduct] = useState({})
-    const {name, price, discount, imgURL} = product;
+    const { name, price, discount, imgURL } = product;
     useEffect(() => {
         fetch(`http://localhost:8080/products/${id}`)
-        .then(res => res.json())
-        .then(data => setProduct(data[0]))
+            .then(res => res.json())
+            .then(data => setProduct(data[0]))
     }, [id])
     // Discount Calculation
     const p = price / 100 * discount;
     const mainPrice = price - p;
-    ////////////
+    
     const handleCheckedProduct = () => {
         const productInfo = {
             name: name,
@@ -23,19 +24,19 @@ const ProductCheckOut = () => {
             discount: discount,
             productImg: imgURL
         }
-        const orderDitails = {...signedInuser, product: productInfo, orderPlacedTime: new Date()}
+        const orderDitails = { ...signedInuser, product: productInfo, orderPlacedTime: new Date().toDateString('dd/MM/yyyy') }
 
         fetch('http://localhost:8080/addOrder', {
             method: "POST",
-            headers: {'Content-Type': 'application/json'},
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(orderDitails)
         })
-        .then(res => res.json())
-        .then(data => {
-            if(data){
-                alert('Your Order Placed Successfully!')
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                if (data) {
+                    alert('Your Order Placed Successfully!')
+                }
+            })
     }
     return (
         <div>
@@ -44,7 +45,7 @@ const ProductCheckOut = () => {
                     <div className="col-12 pt-5">
                         <div className="productDitails border p-3">
                             <h4 className="pb-2">Checkout</h4>
-                                <div className="productTable">
+                            <div className="productTable">
                                 <table class="table table-sm">
                                     <thead>
                                         <tr>
@@ -69,7 +70,7 @@ const ProductCheckOut = () => {
                                         </tr>
                                     </tbody>
                                 </table>
-                                
+
                             </div>
                         </div>
                         <div>

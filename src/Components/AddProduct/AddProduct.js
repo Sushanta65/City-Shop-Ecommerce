@@ -28,8 +28,6 @@ const AddProduct = () => {
         .then(res => {
             console.log(res)
         })
-        
-        console.log(formInfo)
     };
 
     const handleImageUpload = event => {
@@ -48,16 +46,13 @@ const AddProduct = () => {
     }
     return (
         <div>
-            <div className="row pt-4">
+            <div className="row">
                <AdminSiteBar></AdminSiteBar>
-            
             <div className="col-md-10 bg-light">
-                    <h4 className="py-2">Add Products</h4>
+                    <h4 className="p-2">Add Products</h4>
                     <div className="formArea">
                     <form className="" onSubmit={handleSubmit(onSubmit)}>
-                       
                         <input className="form-control w-50" name="name" placeholder="Product Name" id="productName" ref={register} /><br/>
-                        
                         <input className="form-control w-50" name="price" placeholder="Reguler Price" ref={register({ required: true })} /> <br/>
                         <input className="form-control w-50" name="discount" placeholder="Discount" ref={register({ required: true })} /> <br/>
                         {/* {errors.exampleRequired && <span>This field is required</span>} */}

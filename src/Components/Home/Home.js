@@ -15,12 +15,21 @@ const Home = () => {
     return (
         <>
         <div>
-            <div className="input-group m-auto w-50 text-center">
+            <div className="input-group m-auto w-50 text-center pt-4">
                 <input type="text" className="form-control" placeholder="Search" />
+                <div className="input-group-append">
                 <button className="input-group-btn btn btn-success">Search</button>
+                </div>
             </div>
             <div className="container">
-            <div className="row py-3">
+            <div className="row py-4">
+                {/* Spinner added here */}
+                <div className="w-100 text-center">
+                {products.length === 0 && <div className="spinner-border text-success" role="status">
+                <span class="sr-only">Loading...</span>
+                </div>}
+                </div>
+                
             {
                 products.map(product => <Products product={product}></Products>)
             }

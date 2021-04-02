@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import OrderDitails from '../OrderDitails/OrderDitails';
+import { UserContext } from './../../App';
 
 const Orders = () => {
+    const [signedInUser] = useContext(UserContext)
     const [orderedProduct, setOrderedProduct] = useState([])
-    fetch('http://localhost:8080/orders')
+    fetch('http://localhost:8080/orders?email=' + signedInUser.email)
     .then(res => res.json())
     .then(data => {
         setOrderedProduct(data)

@@ -9,7 +9,6 @@ import { UserContext } from './../../App';
 import { useHistory, useLocation } from 'react-router';
 
 
-
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
  }else {
@@ -30,6 +29,7 @@ const Login = () => {
         email: '',
         imgURL: ''
     })
+
     const handleSignIn = () => {
         firebase.auth()
             .signInWithPopup(provider)
@@ -54,7 +54,7 @@ const Login = () => {
     return (
         <div>
            <div className="container">
-               <div className="row">
+               {signedInUser && <div className="row">
                    <div className="col-12 mt-5">
                        <div className="loginForm border w-50 m-auto p-4 mb-3">
                            <h4 className="pb-2">Sign In Form</h4>
@@ -73,9 +73,11 @@ const Login = () => {
                           <button className="w-100 mt-3" onClick={handleSignIn}> <img className="google float-left" src={googleImage} alt="google"/> Sign In With Google</button>
 
                           <button className="w-100 mt-2"> <img className="google float-left" src={fbImage} alt="facebook"/> Sign In With Facebook</button>
+                          
                        </div>
                    </div>
-               </div>
+               </div>}
+               
            </div>
             
         </div>

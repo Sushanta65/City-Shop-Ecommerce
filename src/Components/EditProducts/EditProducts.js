@@ -4,16 +4,12 @@ import AdminSiteBar from '../AdminSiteBar/AdminSiteBar';
 const EditProducts = () => {
     return (
         <div>
-            <div className="row pt-4">
+            <div className="row">
                 <AdminSiteBar></AdminSiteBar>
-                
-            
-            <div className="col-md-10 bg-light">
-                    
-                   <h3>Edit Your Products</h3>
-
+                <div className="col-md-10 bg-light">
+                    <h4 className="p-2">Edit Your Products</h4>
                 </div>
-                </div>
+            </div>
         </div>
     );
 };

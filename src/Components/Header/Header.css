@@ -1,0 +1,10 @@
+img.userPhoto {
+    width: 30px;
+    border-radius: 20px;
+}
+.for-border {
+    border-left: 1px solid lightgray;
+}
+.navbar{
+    border-bottom: 1px solid lightgray;
+}
