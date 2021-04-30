@@ -1,5 +1,6 @@
 #City Shop
-City Shop is an ecommerce website.
+City Shop is an ecommerce website.\
+This is an e-commerce site. Users can be order products and an admin can manage products. Users can be login with Google.
 #Features
 Buy Product from Home/
 Any kind of retail product/
